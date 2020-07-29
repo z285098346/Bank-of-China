@@ -31,8 +31,17 @@
 二、BPMN
 ======
 ### 1.定义
-&nbsp; &nbsp; &nbsp; &nbsp; 由BPMI(The Business Process Management Initiative)开发了一套标准叫业务流程建模符号(BPMN - Business Process Modeling Notation)。在 BPMI Notation Working Group超过2年的努力，于2004年5月对外发布了BPMN 1.0 规范。后BPMI并入到OMG组织，OMG于2011年推出BPMN2.0标准，对BPMN进行了重新定义(Business Process Model and Notation)。BPMN的主要目标是提供一些被所有业务用户容易理解的符号，从创建流程轮廓的业务分析到这些流程的实现，直到最终用户的管理监控。BPMN也支持提供一个内部的模型可以生成可执行的BPEL4WS。因此BPMN的出现，弥补了从业务流程设计到流程开发的间隙。<br>
+&nbsp; &nbsp; &nbsp; &nbsp; 由BPMI开发了一套标准叫业务流程建模符号(BPMN - Business Process Modeling Notation)。BPMN的主要目标是提供一些被所有业务用户容易理解的符号，从创建流程轮廓的业务分析到这些流程的实现，直到最终用户的管理监控。BPMN也支持提供一个内部的模型可以生成可执行的BPEL4WS。因此BPMN的出现，弥补了从业务流程设计到流程开发的间隙。<br>
 &nbsp; &nbsp; &nbsp; &nbsp; BPMN定义了一个业务流程图（Business Process Diagram），该业务流程图基于一个流程图（flowcharting），该流程图被设计用于创建业务流程操作的图形化模型。而一个业务流程模型（Business Process Model），指一个由图形对象（graphical objects）组成的网状图，图形对象包括活动（activities)和用于定义这些活动执行顺序的流程控制器（flow controls）。
+### 2.包含的元素
+* 流对象（FlowObjects）：包括其中的活动、事件与网关。
+* 连接对象（ConnectingObject）：流对象通过连接对象连接起来表示数据的流转。
+* 数据（Data）：包括一些数据对象、数据输入\输出对象等。
+* 泳道（Swimlanes）：对业务做范围维度的区分，一般通过不同的职能进行区分。
+>池（Pools ）： 池描述流程中的一个参与者。可以看做是将一系列活动区别于其他池的一个图形容器<br>
+>道（Lanes ）：道就是在池里面再细分，可以是垂直的也可以是水平的。道也是用于组织和分类活动。
+* 描述对象（Artifacts）：不影响流程运行，为流程图可读性进行补充性描述。
+
 
 三、Docker和容器
 =====
