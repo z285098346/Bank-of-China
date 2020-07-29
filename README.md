@@ -41,7 +41,7 @@
 >池（Pools ）： 池描述流程中的一个参与者。可以看做是将一系列活动区别于其他池的一个图形容器<br>
 >道（Lanes ）：道就是在池里面再细分，可以是垂直的也可以是水平的。道也是用于组织和分类活动。
 * 描述对象（Artifacts）：不影响流程运行，为流程图可读性进行补充性描述。<br>
-![image](https://github.com/z285098346/BC-/tree/master/image/bpmn.png)
+![image](https://github.com/z285098346/BC-/raw/master/image/bpmn.png)
 
 三、Docker和容器
 =====
