@@ -45,6 +45,8 @@
 ### 3.camunda实践
 * 流程图
 ![image](https://github.com/z285098346/Bank-of-China/raw/master/image/test1.png)
+* XML代码
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/test1-XML.png)
 
 
 三、Docker和容器
