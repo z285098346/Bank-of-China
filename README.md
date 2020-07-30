@@ -42,6 +42,9 @@
 >道（Lanes ）：道就是在池里面再细分，可以是垂直的也可以是水平的。道也是用于组织和分类活动。
 * 描述对象（Artifacts）：不影响流程运行，为流程图可读性进行补充性描述。<br>
 ![image](https://github.com/z285098346/BC-/raw/master/image/bpmn.png)
+### 3.camunda实践
+* 流程图
+
 
 三、Docker和容器
 =====
