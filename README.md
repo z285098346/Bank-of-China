@@ -44,6 +44,7 @@
 ![image](https://github.com/z285098346/BC-/raw/master/image/bpmn.png)
 ### 3.camunda实践
 * 流程图
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/test1.png)
 
 
 三、Docker和容器
