@@ -11,11 +11,17 @@
 * 以Cookie作为凭证媒介<br>
 
 &nbsp; &nbsp; &nbsp; &nbsp; 最简单的单点登录实现方式，是使用cookie作为媒介，存放用户凭证。用户登录父应用之后，应用返回一个加密的cookie，当用户访问子应用的时候，携带上这个cookie，授权应用解密cookie并进行校验，校验通过则登录当前用户。<br>
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/SSO1.png)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; 不难发现以上方式把信任存储在客户端的Cookie中，这种方式很容易令人质疑：<br>
+&nbsp; &nbsp; &nbsp; &nbsp; (1)Cookie不安全<br>
+&nbsp; &nbsp; &nbsp; &nbsp; (2)不能跨域实现免登
 * 通过JSONP实现<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 对于跨域问题，可以使用JSONP实现。用户在父应用中登录后，跟Session匹配的Cookie会存到客户端中，当用户需要登录子应用的时候，授权应用访问父应用提供的JSONP接口，并在请求中带上父应用域名下的Cookie，父应用接收到请求，验证用户的登录状态，返回加密的信息，子应用通过解析返回来的加密信息来验证用户，如果通过验证则登录用户。<br>
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/SSO2.png)<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 这种方式虽然能解决跨域问题，但是安全性其实跟把信任存储到Cookie是差不多的。如果一旦加密算法泄露了，攻击者可以在本地建立一个实现了登录接口的假冒父应用，通过绑定Host来把子应用发起的请求指向本地的假冒父应用，并作出回应。因为攻击者完全可以按照加密算法来伪造响应请求，子应用接收到这个响应之后一样可以通过验证，并且登录特定用户。
 * 通过页面重定向的方式<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 最后一种介绍的方式，是通过父应用和子应用来回重定向中进行通信，实现信息的安全传递。父应用提供一个GET方式的登录接口，用户通过子应用重定向连接的方式访问这个接口，如果用户还没有登录，则返回一个的登录页面，用户输入账号密码进行登录。如果用户已经登录了，则生成加密的Token，并且重定向到子应用提供的验证Token的接口，通过解密和校验之后，子应用登录当前用户。<br>
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/SSO3.png)<br>
 &nbsp; &nbsp; &nbsp; &nbsp; 这种方式较前面两种方式，接解决了上面两种方法暴露出来的安全性问题和跨域的问题，但是并没有前面两种方式方便。
 
 
