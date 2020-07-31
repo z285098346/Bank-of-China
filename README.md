@@ -4,9 +4,13 @@
 cd /F   定位到F盘<br>
 ls    查看当前目录下文件<br>
 git clone https://github.com/z285098346/Bank-of-China.git   克隆到本地<br>
+### 2.修改并上传文件
+本次修改test.txt并上传，操作如下：<br>
+git status  查看是否有修改内容需要提交<br>
+git add test.txt  指向需要提交的内容文件<br>
+git commit  -m "test"  提交到本地库<br>
+git push origin master 提交到远程仓库<br>
 
-
-### 2.创建仓库--完成
 
 二、几个基本概念
 ====
