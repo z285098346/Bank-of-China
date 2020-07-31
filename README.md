@@ -10,6 +10,7 @@ git status  查看是否有修改内容需要提交<br>
 git add test.txt  指向需要提交的内容文件<br>
 git commit  -m "test"  提交到本地库<br>
 git push origin master 提交到远程仓库<br>
+![image](https://github.com/z285098346/Bank-of-China/raw/master/image/git1.png)
 
 
 二、几个基本概念
