@@ -1,6 +1,11 @@
 一、Github使用
 ====
-### 1.注册账户--完成
+### 1.基本命令
+cd /F   定位到F盘<br>
+ls    查看当前目录下文件<br>
+git clone https://github.com/z285098346/Bank-of-China.git   克隆到本地<br>
+
+
 ### 2.创建仓库--完成
 
 二、几个基本概念
